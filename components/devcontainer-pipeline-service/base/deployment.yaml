@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: devcontainer-pipeline-service
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads-stage/xjiang-tenant/pipeline-service/devcontainer-pipeline-service@sha256:e9b6e880a8bc40bf06362bdb4ecf31fc6619755790fcf25ed022c2fb7f046c4d
         imagePullPolicy: Always
         name: container-image
         ports:
