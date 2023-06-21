@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devcontainer-pipeline-service
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devcontainer-pipeline-service
+    app.kubernetes.io/part-of: pipeline-service
+  name: devcontainer-pipeline-service
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: devcontainer-pipeline-service
+status:
+  loadBalancer: {}
